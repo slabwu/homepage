@@ -10,15 +10,34 @@ img {
     width: 280px;
 }
 
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 main > section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 60px 20px;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 48;
+  color: black;
+}
+
 @media (min-width: 1250px) {
     main > section {
         grid-template-columns: repeat(3, 400px);
+    }
+
+    main {
+        align-items: center;
     }
 }
 
@@ -32,6 +51,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 80px;
 }
 
 .container {
@@ -52,6 +72,13 @@ header {
 
 header > p {
     font-size: 20px;
+}
+
+a {
+    padding: 0 8px 0;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
 }
 
 h2 {
@@ -78,14 +105,29 @@ h2 {
 }
 
 .project h3 {
-    margin-top: -10px;
     font-weight: normal;
     font-size: 24px;
+    flex: 1;
 }
 
 .project p {
     margin-top: -10px;
     font-size: 18px;
+}
+
+.project i {
+    font-size: 24px;
+}
+
+.project span {
+    transform: translateY(2px);
+}
+
+.projectHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: -30px;
 }
 
 
@@ -112,4 +154,14 @@ footer section {
 
 footer img {
     width: 100%;
+}
+
+footer span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: white;
 }
