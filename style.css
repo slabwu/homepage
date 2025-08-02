@@ -94,7 +94,7 @@ header:before {
     font-size: 23vw;
 }
 
-.description p {
+header > p {
     font-size: 20px;
     padding: 0 5% 0;
 }
@@ -208,14 +208,93 @@ footer a {
 
 @media (min-width: 650px) {
     header {
-        border: red 1px solid;
+        margin: 100px 30px 60px;
+        padding-bottom: 0;
+        height: 420px;
+        display: block;
+        z-index: 1;
+    }
+
+    .container {
+        float: left;
+        width: fit-content;
+        overflow: visible;
+        height: 200px;
+        width: 290px;
+        position: relative;
+        z-index: 3;
     }
 
     .container img {
-        
+        position: absolute;
+        top: -100px;
+        height: 300px;
+        width: auto;
+        left: 0;
+    }
+
+    .container h1 {
+        position: absolute;
+        font-size: 80px;
+        left: 240px;
+        bottom: 200px;
+    }
+
+    header p {
+        margin-left: 40px;
+        margin-top: 0;
+        padding:  10px 20px 60px;
+        background: white;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+        -webkit-clip-path: inset(0 -5px -5px -5px);
+        clip-path: inset(0 -5px -5px -5px);
+    }
+
+    header h2 {
+        margin: 30px 0 0;
+        padding-top: 40px;
+        background: white;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+        -webkit-clip-path: inset(-5px -5px 0 -5px);
+        clip-path: inset(-5px -5px 0 -5px);
     }
 
     span {
         display: none;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 30px;
+    }
+
+    footer > section > h1 {
+        text-align: right;
+    }
+
+    footer section {
+        text-align: left;
+    }
+
+    footer img {
+        height: 389.22px;
+        width: auto;
+    }
+
+    header:before {
+        display: none;
+    }
+
+    main:before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        left: 0;
+        width: 100%;
+        height: 580px;
+        transform: skewY(-20deg);
+        background: var(--background);
     }
 }
