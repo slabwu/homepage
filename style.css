@@ -19,7 +19,7 @@ main {
 main > section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 60px 20px;
+    gap: 60px 30px;
 }
 
 .material-symbols-outlined {
@@ -42,7 +42,7 @@ main > section {
 }
 
 section > div {
-    border: solid 1px black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 30%);
 }
 
 
@@ -94,7 +94,7 @@ header:before {
     font-size: 23vw;
 }
 
-header > p {
+.description p {
     font-size: 20px;
     padding: 0 5% 0;
 }
@@ -111,6 +111,14 @@ h2 {
     font-weight: normal;
     font-size: 44px;
     margin: 20px 0 20px;
+}
+
+header h2 {
+    margin-bottom: 0;
+}
+
+header p {
+    margin-top: 10px;
 }
 
 
@@ -193,4 +201,21 @@ footer span {
 
 footer a {
     color: white;
+    margin-bottom: 30px;
+}
+
+
+
+@media (min-width: 650px) {
+    header {
+        border: red 1px solid;
+    }
+
+    .container img {
+        
+    }
+
+    span {
+        display: none;
+    }
 }
