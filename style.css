@@ -100,6 +100,12 @@ header:before {
     padding: 0 5% 0;
 }
 
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 a {
     padding: 0 8px 0;
     font-size: 32px;
@@ -120,6 +126,10 @@ header h2 {
 
 header p {
     margin-top: 10px;
+}
+
+.description span {
+    display: block;
 }
 
 
@@ -242,6 +252,10 @@ footer a {
         bottom: 200px;
     }
 
+    .description {
+        display: block;
+    }
+
     .description p {
         margin-left: 40px;
         margin-top: 0;
@@ -260,9 +274,10 @@ footer a {
         box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
         -webkit-clip-path: inset(-5px -5px 0 -5px);
         clip-path: inset(-5px -5px 0 -5px);
+        text-align: left;
     }
 
-    span {
+    .description span {
         display: none;
     }
 
@@ -273,17 +288,29 @@ footer a {
         padding: 30px;
     }
 
-    footer > section > h1 {
-        text-align: right;
+    footer section {
+        margin-left: 20px;
     }
 
-    footer section {
-        text-align: left;
+    footer section span {
+        justify-content: left;
+    }
+
+    footer section span a:nth-child(1) {
+        padding-left: 0;
+    }
+
+    footer picture {
+        margin-right: 30px;
     }
 
     footer img {
         height: 389.22px;
         width: auto;
+    }
+
+    footer h2 {
+        text-align: left;
     }
 
     header:before {
