@@ -1,13 +1,13 @@
+:root {
+    --background: rgb(59, 155, 181);
+}
+
 body {
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-img {
-    width: 280px;
 }
 
 main {
@@ -18,7 +18,7 @@ main {
 
 main > section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 60px 20px;
 }
 
@@ -31,7 +31,7 @@ main > section {
   color: black;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1350px) {
     main > section {
         grid-template-columns: repeat(3, 400px);
     }
@@ -54,24 +54,49 @@ header {
     padding-bottom: 80px;
 }
 
+header:before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 480px;
+    transform: skewY(-30deg);
+    background: var(--background);
+}
+
+.container img {
+    object-position: left;
+    object-fit: cover;
+    width: calc(100% - 10px);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 30%);
+}
+
 .container {
+    margin-top: 5%;
+    width: 90%;
+    height: fit-content;
+    padding: 0;
     position: relative;
     display: block;
     text-align: center;
-    width: fit-content;
+    overflow: hidden;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 50%);
 }
 
 .container > h1 {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
+    bottom: 5px;
+    margin: 0;
+    left: 10px;
     color: white;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 23vw;
 }
 
 header > p {
     font-size: 20px;
+    padding: 0 5% 0;
 }
 
 a {
@@ -130,6 +155,10 @@ h2 {
     margin-top: -30px;
 }
 
+section {
+    padding: 0 5% 0;
+}
+
 
 
 main {
@@ -137,7 +166,7 @@ main {
 }
 
 footer {
-    background-color: black;
+    background: var(--background);
 }
 
 footer p:nth-child(2) {
